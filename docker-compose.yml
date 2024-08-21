@@ -9,6 +9,20 @@ services:
             - frontend
 
     frontend:
+        image: imagestored/frontend${TAG:-}
+        restart: always
+        depends_on:
+            - backend
+
+    nginx-slim:
+        build: nginx
+        restart: always
+        ports:
+            - "8080:8080" #Change to X:8080 to access on port X
+        depends_on:
+            - frontend-slim
+
+    frontend-slim:
         build: frontend
         restart: always
         depends_on:
