@@ -98,10 +98,6 @@ export default function AutocompleteSearchBar(props: any) {
                 }
                 }
             />
-            <IconButton
-                className={props.className}>
-                <Tune />
-            </IconButton>
         </div>
     )
 }

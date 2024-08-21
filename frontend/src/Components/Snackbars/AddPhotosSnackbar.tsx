@@ -19,7 +19,6 @@ function DialogComponent(props: any) {
             <Button color="inherit" onClick={() => setOpen(true)}>
                 Add to album
             </Button>
-            <AddToAlbum open={open} setOpen={setOpen} albums={props.albums} cb={cb} closeCallback={props.closeAddSnackbar} />
         </div>
     );
 }

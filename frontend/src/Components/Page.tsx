@@ -74,7 +74,7 @@ export default function ResponsiveDrawer({ window }: any) {
     const drawer = (
         <div>
             <div className={classes.toolbar}>
-                <div className={classes.topleft}>ImageStore</div>
+                <div className={classes.topleft}>Julia & Malte</div>
             </div>
             <Divider />
             <List>
@@ -93,38 +93,6 @@ export default function ResponsiveDrawer({ window }: any) {
                         <Photo />
                     </ListItemIcon>
                     <ListItemText primary="Photos" />
-                </ListItem>
-                <ListItem
-                    button
-                    selected={location.pathname.startsWith("/albums")}
-                    onClick={() => {
-                        history.push({
-                            pathname: "/albums",
-                            state: { clearSearchBar: true }
-                        });
-                        setMobileOpen(false);
-                    }}
-                >
-                    <ListItemIcon>
-                        <PhotoAlbum />
-                    </ListItemIcon>
-                    <ListItemText primary="Albums" />
-                </ListItem>
-                <ListItem
-                    button
-                    selected={location.pathname.startsWith("/map")}
-                    onClick={() => {
-                        history.push({
-                            pathname: "/map",
-                            state: { clearSearchBar: true }
-                        });
-                        setMobileOpen(false);
-                    }}
-                >
-                    <ListItemIcon>
-                        <Map />
-                    </ListItemIcon>
-                    <ListItemText primary="Map" />
                 </ListItem>
             </List>
         </div>
@@ -168,12 +136,6 @@ export default function ResponsiveDrawer({ window }: any) {
 
     return (
         <Switch>
-            <Route path="/albums">
-                <AlbumPage searchByImageEnabled={searchByImageEnabled} drawerElement={drawerElement} handleDrawerToggle={handleDrawerToggle} />
-            </Route>
-            <Route path="/map">
-                <MapPage searchByImageEnabled={searchByImageEnabled} drawerElement={drawerElement} handleDrawerToggle={handleDrawerToggle} />
-            </Route>
             <Route path="/">
                 <PhotoPage refresh={async () => { }} searchByImageEnabled={searchByImageEnabled} drawerElement={drawerElement} handleDrawerToggle={handleDrawerToggle} root="Photo" />
             </Route>

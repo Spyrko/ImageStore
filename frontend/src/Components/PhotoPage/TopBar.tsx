@@ -49,30 +49,9 @@ export default function TopBar(props: any) {
                         </Tooltip>
                     )}
                     {props.numSelected() !== 0 && (
-                        <Tooltip title="Download">
-                            <IconButton className="IconButton" color="primary" aria-label="cloud_download" onClick={props.buttonFunctions.download}>
-                                <CloudDownload />
-                            </IconButton>
-                        </Tooltip>
-                    )}
-                    {props.numSelected() !== 0 && (
-                        <Tooltip title="Add to album">
-                            <IconButton className="IconButton" color="primary" aria-label="library_add" onClick={props.buttonFunctions.addToAlbum}>
-                                <LibraryAdd />
-                            </IconButton>
-                        </Tooltip>
-                    )}
-                    {props.numSelected() !== 0 && (
                         <Tooltip title="Add labels">
                             <IconButton className="IconButton" color="primary" aria-label="label" onClick={props.buttonFunctions.label}>
                                 <Label />
-                            </IconButton>
-                        </Tooltip>
-                    )}
-                    {props.numSelected() !== 0 && (
-                        <Tooltip title="Delete">
-                            <IconButton className="IconButton" color="primary" aria-label="delete" onClick={props.buttonFunctions.delete}>
-                                <Delete />
                             </IconButton>
                         </Tooltip>
                     )}

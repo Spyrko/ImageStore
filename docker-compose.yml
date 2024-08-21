@@ -2,13 +2,15 @@ version: "3.9"
 services:
     nginx:
         image: imagestored/nginx${TAG:-}
+        restart: always
         ports:
             - "3000:8080" #Change to X:8080 to access on port X
         depends_on:
             - frontend
 
     frontend:
-        image: imagestored/frontend${TAG:-}
+        build: frontend
+        restart: always
         depends_on:
             - backend
 
