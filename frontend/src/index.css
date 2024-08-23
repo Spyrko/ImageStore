@@ -8,3 +8,13 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+@font-face {
+    font-family: 'eyesome-duo-script';
+    src: url('resources/fonts/eyesome-duo-script.otf') format('otf'),
+         url('resources/fonts/eyesome-duo-script.ttf') format('ttf'),
+         url('resources/fonts/eyesome-duo-script.woff') format('woff'),
+         url('resources/fonts/eyesome-duo-script.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

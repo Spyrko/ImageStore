@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
             "justify-content": "center",
             "align-items": "center",
             height: 64,
+            "font-family": "eyesome-duo-script",
         },
         content: {
             flexGrow: 1,
